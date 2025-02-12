@@ -1,6 +1,14 @@
+using Microsoft.EntityFrameworkCore;
 using PerfumeShopManagementSystem.App.Components;
+using PerfumeShopManagementSystem.Database.Models;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<AppDbContext>(opt =>
+{
+	opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
+});
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

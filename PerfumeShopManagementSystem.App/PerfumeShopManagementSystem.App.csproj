@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PerfumeShopManagementSystem.Database\PerfumeShopManagementSystem.Database.csproj" />
+  </ItemGroup>
+
 </Project>
