@@ -15,6 +15,8 @@ public partial class OrderItem
 
     public decimal UnitPrice { get; set; }
 
+    public DateTime CreatedAt { get; set; }
+
     public virtual Order Order { get; set; } = null!;
 
     public virtual Perfume Perfume { get; set; } = null!;
